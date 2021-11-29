@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>借還教室</title>
+	<style>
+	p					{font-size: 20px;}
+	
+	table, th, tr, td	{text-align: center;
+						 border:1px solid black;
+						 border-collapse: collapse;}
+	.classroom:hover 	{background-color: blue;
+						 color: white;
+						 font-weight: bold;}
+	</style>
+</head>
+<body>
+	 
+    <form>
+		<input type = "hidden" name = "recipient" value = "deitel@deitel.com">
+		<input type = "hidden" name = "subject" value = "Feedback Form">
+		<input type = "hidden" name = "redirect" value = "main.html">
+		
+		<p style = "font-size: 36px">借還教室</p>
+		<p>
+			<label>欲借用時間</label>
+			<input id = "lenddate" name = "lenddate" type = "date" required />
+			<input id = "lendtime" name = "lendtime" type = "time" required />
+			<span style = "color: red;">(必填)</span>
+		</p>
+		<p>
+			<label>欲歸還時間</label>
+			<input id = "returndate" name = "returndate" type = "date" required />
+			<input id = "returntime" name = "returntime" type = "time" required />
+			<span style = "color: red;">(必填)</span>
+		</p>
+		<p>
+			<label>設備篩選</label>
+			
+			<input id = "computer" value = "computer" type = "checkbox"/>
+			<label for = "computer">電腦</label>
+			
+			<input id = "projection_screen" value = "projection_screen" type = "checkbox"/>
+			<label for = "projection_screen">投影幕</label>
+					
+			<input id = "mac" value = "mac" type = "checkbox"/>
+			<label for = "mac">MAC</label>
+			
+		</p>
+		<p>
+			<label>關鍵字搜尋</label>
+			<input id = "search" type = "text" size = "20"/>
+			<input id = "search" value = "搜尋" class = "button" type = "button">
+		</p>
+			
+		<table style="font-size: 20px; width:60%">
+		  <tr>
+			<th class="floor">樓層</th>
+			<th colspan="10">教室編號</th><!--假設每層樓教室最多10間-->
+		  </tr>
+		  <tr>
+			<th class="floor">6</th>
+			<td class="classroom">606</td>
+			<td class="classroom">666</td>
+		  </tr>
+		  <tr>
+			<th class="floor">5</th>
+			<td class="classroom">505</td>
+			<td class="classroom">555</td>
+		  </tr>
+		  <tr>
+			<th class="floor">4</th>
+			<td class="classroom">407</td>
+			<td class="classroom">409</td>
+		  </tr>
+		  <tr>
+			<th class="floor">3</th>
+			<td class="classroom">301</td>
+			<td class="classroom">303</td>
+		  </tr>
+		  <tr>
+			<th class="floor">2</th>
+			<td class="classroom">201</td>
+			<td class="classroom">203</td>
+			<td class="classroom">205</td>
+			<td class="classroom">212</td>
+		  </tr>
+		  <tr>
+			<th class="floor">1</th>
+			<td class="classroom">101</td>
+			<td class="classroom">105</td>
+		  </tr>
+		  <tr>
+			<th class="floor">B1</th>
+			<td class="classroom">B01</td>
+			<td class="classroom">B03</td>
+			<td class="classroom">B10</td>
+			<td class="classroom">B12</td>
+		  </tr>
+		</table>
+		
+		<p>
+			<input class = "button" type = "submit" value = "借用">
+			<input class = "button" type = "reset" value = "重設">
+		</p>
+    </form>
+</body>
+</html>
+
